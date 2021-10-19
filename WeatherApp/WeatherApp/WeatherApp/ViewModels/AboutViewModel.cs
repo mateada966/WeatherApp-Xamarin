@@ -10,7 +10,7 @@ namespace WeatherApp.ViewModels
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://github.com/mateada966/WeatherApp-Xamarin"));
         }
 
         public ICommand OpenWebCommand { get; }
