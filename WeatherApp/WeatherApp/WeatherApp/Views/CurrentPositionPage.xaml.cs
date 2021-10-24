@@ -38,7 +38,7 @@ namespace WeatherApp.Views
 
                     descriptionTxt.Text = weatherInfo.weather[0].description.ToUpper();
                     iconImg.Source = $"w{weatherInfo.weather[0].icon}";
-                    cityTxt.Text = weatherInfo.name.ToUpper();
+                    cityTxt.Text = string.Concat(weatherInfo.name.ToUpper(),", ", weatherInfo.sys.country);
                     temperatureTxt.Text = weatherInfo.main.temp.ToString("0");
                     humidityTxt.Text = $"{weatherInfo.main.humidity}%";
                     pressureTxt.Text = $"{weatherInfo.main.pressure} hpa";
