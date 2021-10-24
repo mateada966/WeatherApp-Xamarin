@@ -28,9 +28,9 @@ namespace WeatherApp.Views
         {
             var tempList = new List<Weather>();
             tempList.Add(new Weather { Temp = "22", Date = "Sunday 16", Icon = "background_logo.png" });
-            tempList.Add(new Weather { Temp = "21", Date = "Monday 17", Icon = "background_logo.png" });
+            tempList.Add(new Weather { Temp = "21", Date = "Monday 17", Icon = "cloud.png" });
             tempList.Add(new Weather { Temp = "20", Date = "Tuesday 18", Icon = "background_logo.png" });
-            tempList.Add(new Weather { Temp = "12", Date = "Wednesday 19", Icon = "background_logo.png" });
+            tempList.Add(new Weather { Temp = "12", Date = "Wednesday 19", Icon = "cloud.png" });
             tempList.Add(new Weather { Temp = "17", Date = "Thursday 20", Icon = "background_logo.png" });
 
             return tempList;
