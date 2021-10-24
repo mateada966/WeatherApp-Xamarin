@@ -12,6 +12,10 @@
         <vm:CurrentPositionViewModel />
     </ContentPage.BindingContext>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="icon_refresh" Clicked="Refresh_Clicked" />
+    </ContentPage.ToolbarItems>
+
     <Grid VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -23,17 +27,17 @@
         <Image x:Name="bgImg" Source="background_logo.png" Aspect="Fill" HeightRequest="275" VerticalOptions="StartAndExpand"/>
         
         <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="10,10">
-            <Label x:Name="cityTxt" Text="LONDON, GB" FontSize="25" VerticalOptions="Center" TextColor="White"/>
+            <Label x:Name="cityTxt" Text="City, Code" FontSize="25" VerticalOptions="Center" TextColor="White"/>
         </StackLayout>
 
         <StackLayout Orientation="Vertical" Margin="10,20,10,20" HorizontalOptions="Center" VerticalOptions="Center">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                 <Image x:Name="iconImg" Source="cloud.png" WidthRequest="50" HeightRequest="50" VerticalOptions="Center"/>
-                <Label x:Name="temperatureTxt" Text="12" TextColor="White" FontSize="70" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Label x:Name="temperatureTxt" Text="99" TextColor="White" FontSize="70" FontAttributes="Bold" VerticalOptions="Center"/>
                 <Label Text="°C" TextColor="White" FontSize="35" VerticalOptions="Center"/>
             </StackLayout>
             <Label x:Name="descriptionTxt" Text="Light intensity drizzle rain" TextColor="White" FontSize="14" HorizontalOptions="Center"/>
-            <Label x:Name="dateTxt" Text="June 15, 09:03 AM" TextColor="White" FontSize="10" HorizontalOptions="Center"/>
+            <Label x:Name="dateTxt" Text="January 01, 00:00 AM" TextColor="White" FontSize="10" HorizontalOptions="Center"/>
         </StackLayout>
 
         <Frame Grid.Row="1" HasShadow="True" CornerRadius="10" Margin="20,-40,20,0" Padding="0" HeightRequest="100" VerticalOptions="Start">
@@ -47,28 +51,28 @@
                 <StackLayout Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
                     <Image Source="icon_humidity.png" HeightRequest="25" HorizontalOptions="Center"/>
                     <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
-                        <Label x:Name="humidityTxt" Text="50%" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label x:Name="humidityTxt" Text="100%" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="Humidity" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
                     <Image Source="icon_wind.png" HeightRequest="25" HorizontalOptions="Center"/>
                     <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
-                        <Label x:Name="windTxt" Text="2.6 m/s" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label x:Name="windTxt" Text="100 m/s" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="Wind" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Column="2" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
                     <Image Source="icon_pressure.png" HeightRequest="25" HorizontalOptions="Center"/>
                     <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
-                        <Label x:Name="pressureTxt" Text="1011 hpa" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label x:Name="pressureTxt" Text="100 hpa" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="Pressure" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout Grid.Column="3" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
                     <Image Source="icon_cloudiness.png" HeightRequest="25" HorizontalOptions="Center"/>
                     <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
-                        <Label x:Name="cloudinessTxt" Text="24%" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                        <Label x:Name="cloudinessTxt" Text="100%" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
                         <Label Text="Cloudiness" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
                     </StackLayout>
                 </StackLayout>
@@ -95,8 +99,8 @@
                     <Image Grid.ColumnSpan="3" Source="background_logo.png" Aspect="Fill" />
 
                     <StackLayout Grid.Column="0" VerticalOptions="Center">
-                        <Label x:Name="dayOneTxt" Text="Wednesday" TextColor="White" FontSize="15" FontAttributes="Bold" VerticalOptions="Center" Margin="20,0"/>
-                        <Label x:Name="dateOneTxt" Text="28.10" TextColor="White" FontSize="15" VerticalOptions="Center" Margin="20,0"/>
+                        <Label x:Name="dayOneTxt" Text="Wednesday" TextColor="White" FontSize="14" FontAttributes="Bold" VerticalOptions="Center" Margin="20,0"/>
+                        <Label x:Name="dateOneTxt" Text="01.01" TextColor="White" FontSize="14" VerticalOptions="Center" Margin="20,0"/>
                     </StackLayout>
 
                     <StackLayout Grid.Column="1" VerticalOptions="Center">
@@ -104,7 +108,7 @@
                     </StackLayout>
 
                     <StackLayout Grid.Column="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label x:Name="tempOneTxt" Text="28" TextColor="White" FontSize="40" FontAttributes="Bold" VerticalOptions="Center"/>
+                        <Label x:Name="tempOneTxt" Text="0" TextColor="White" FontSize="40" FontAttributes="Bold" VerticalOptions="Center"/>
                         <Label Text="°C" TextColor="White" FontSize="20" VerticalOptions="Center"/>
                     </StackLayout>
                 </Grid>
@@ -120,8 +124,8 @@
                     <Image Grid.ColumnSpan="3" Source="background_logo.png" Aspect="Fill" />
 
                     <StackLayout Grid.Column="0" VerticalOptions="Center">
-                        <Label x:Name="dayTwoTxt" Text="Wednesday" TextColor="White" FontSize="15" FontAttributes="Bold" VerticalOptions="Center" Margin="20,0"/>
-                        <Label x:Name="dateTwoTxt" Text="28.10" TextColor="White" FontSize="15" VerticalOptions="Center" Margin="20,0"/>
+                        <Label x:Name="dayTwoTxt" Text="Wednesday" TextColor="White" FontSize="14" FontAttributes="Bold" VerticalOptions="Center" Margin="20,0"/>
+                        <Label x:Name="dateTwoTxt" Text="01.01" TextColor="White" FontSize="14" VerticalOptions="Center" Margin="20,0"/>
                     </StackLayout>
 
                     <StackLayout Grid.Column="1" VerticalOptions="Center">
@@ -129,7 +133,7 @@
                     </StackLayout>
 
                     <StackLayout Grid.Column="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label x:Name="tempTwoTxt" Text="28" TextColor="White" FontSize="40" FontAttributes="Bold" VerticalOptions="Center"/>
+                        <Label x:Name="tempTwoTxt" Text="0" TextColor="White" FontSize="40" FontAttributes="Bold" VerticalOptions="Center"/>
                         <Label Text="°C" TextColor="White" FontSize="20" VerticalOptions="Center"/>
                     </StackLayout>
                 </Grid>
@@ -145,8 +149,8 @@
                     <Image Grid.ColumnSpan="3" Source="background_logo.png" Aspect="Fill" />
 
                     <StackLayout Grid.Column="0" VerticalOptions="Center">
-                        <Label x:Name="dayThreeTxt" Text="Wednesday" TextColor="White" FontSize="15" FontAttributes="Bold" VerticalOptions="Center" Margin="20,0"/>
-                        <Label x:Name="dateThreeTxt" Text="28.10" TextColor="White" FontSize="15" VerticalOptions="Center" Margin="20,0"/>
+                        <Label x:Name="dayThreeTxt" Text="Wednesday" TextColor="White" FontSize="14" FontAttributes="Bold" VerticalOptions="Center" Margin="20,0"/>
+                        <Label x:Name="dateThreeTxt" Text="01.01" TextColor="White" FontSize="14" VerticalOptions="Center" Margin="20,0"/>
                     </StackLayout>
 
                     <StackLayout Grid.Column="1" VerticalOptions="Center">
@@ -154,7 +158,7 @@
                     </StackLayout>
 
                     <StackLayout Grid.Column="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label x:Name="tempThreeTxt" Text="28" TextColor="White" FontSize="40" FontAttributes="Bold" VerticalOptions="Center"/>
+                        <Label x:Name="tempThreeTxt" Text="0" TextColor="White" FontSize="40" FontAttributes="Bold" VerticalOptions="Center"/>
                         <Label Text="°C" TextColor="White" FontSize="20" VerticalOptions="Center"/>
                     </StackLayout>
                 </Grid>
@@ -171,8 +175,8 @@
                     <Image Grid.ColumnSpan="3" Source="background_logo.png" Aspect="Fill" />
 
                     <StackLayout Grid.Column="0" VerticalOptions="Center">
-                        <Label x:Name="dayFourTxt" Text="Wednesday" TextColor="White" FontSize="15" FontAttributes="Bold" VerticalOptions="Center" Margin="20,0"/>
-                        <Label x:Name="dateFourTxt" Text="28.10" TextColor="White" FontSize="15" VerticalOptions="Center" Margin="20,0"/>
+                        <Label x:Name="dayFourTxt" Text="Wednesday" TextColor="White" FontSize="14" FontAttributes="Bold" VerticalOptions="Center" Margin="20,0"/>
+                        <Label x:Name="dateFourTxt" Text="01.01" TextColor="White" FontSize="14" VerticalOptions="Center" Margin="20,0"/>
                     </StackLayout>
 
                     <StackLayout Grid.Column="1" VerticalOptions="Center">
@@ -180,7 +184,7 @@
                     </StackLayout>
 
                     <StackLayout Grid.Column="2" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label x:Name="tempFourTxt" Text="28" TextColor="White" FontSize="40" FontAttributes="Bold" VerticalOptions="Center"/>
+                        <Label x:Name="tempFourTxt" Text="0" TextColor="White" FontSize="40" FontAttributes="Bold" VerticalOptions="Center"/>
                         <Label Text="°C" TextColor="White" FontSize="20" VerticalOptions="Center"/>
                     </StackLayout>
                 </Grid>
