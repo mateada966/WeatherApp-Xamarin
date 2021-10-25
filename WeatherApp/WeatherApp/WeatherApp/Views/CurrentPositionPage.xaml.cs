@@ -48,7 +48,7 @@ namespace WeatherApp.Views
                     var dt = DateTime.Now;
                     dateTxt.Text = dt.ToString("dddd, dd MMMM - HH:mm:ss", CultureInfo.CreateSpecificCulture("en-US")).ToUpper();
 
-                    GetForecast();
+                    GetForecast(dt);
                 }
                 catch(Exception ex)
                 {
@@ -61,7 +61,7 @@ namespace WeatherApp.Views
             }
         }
 
-        private async void GetForecast()
+        private async void GetForecast(DateTime dt)
         {
             var url = $"http://api.openweathermap.org/data/2.5/forecast?q={Location}&appid={APIKey}&units=metric";
             var result = await APICaller.Get(url);
@@ -74,13 +74,17 @@ namespace WeatherApp.Views
 
                     List<List> allList = new List<List>();
 
+                    var dtDateNow = dt.ToString("yyyy-MM-dd");
+
                     foreach (var list in forcastInfo.list)
                     {
-                        //var date = DateTime.ParseExact(list.dt_txt, "yyyy-MM-dd hh:mm:ss", CultureInfo.InvariantCulture);
                         var date = DateTime.Parse(list.dt_txt);
 
-                        if (date > DateTime.Now && date.Hour == 12 && date.Minute == 0 && date.Second == 0)
+                        if(date.ToString("yyyy-MM-dd").CompareTo(dtDateNow) > 0 
+                            && date.ToString("HH-mm-ss").CompareTo("12-00-00") == 0 )
+                        {
                             allList.Add(list);
+                        }
                     }
 
                     //Day 1
