@@ -233,7 +233,7 @@ namespace WeatherApp.ViewModels
         //-----------------------------------------------------------
         #endregion
 
-        #region Location and API key
+        #region API key
         // API key
         //-----------------------------------------------------------
         private string apiKey;
@@ -250,7 +250,7 @@ namespace WeatherApp.ViewModels
             Title = "Current Position";
 
             Location = "Gliwice";
-            APIKey = "c889a0af65c88a43107431a60ba35d84";
+            APIKey = API_Key;
 
             GetCurrentPosition();
         }

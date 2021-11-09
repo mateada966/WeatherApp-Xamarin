@@ -12,6 +12,8 @@ namespace WeatherApp.ViewModels
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
+        public string API_Key = "c889a0af65c88a43107431a60ba35d84";
+
         bool isBusy = false;
         public bool IsBusy
         {
