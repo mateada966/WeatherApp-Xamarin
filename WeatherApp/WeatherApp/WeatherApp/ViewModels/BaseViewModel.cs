@@ -10,7 +10,7 @@ namespace WeatherApp.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<Location> DataStore => DependencyService.Get<IDataStore<Location>>();
 
         public string API_Key = "c889a0af65c88a43107431a60ba35d84";
 

@@ -11,8 +11,8 @@ namespace WeatherApp
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(LocationDetailPage), typeof(LocationDetailPage));
+            Routing.RegisterRoute(nameof(NewLocationPage), typeof(NewLocationPage));
         }
 
     }

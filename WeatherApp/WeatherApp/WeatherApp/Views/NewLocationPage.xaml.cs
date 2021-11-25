@@ -8,14 +8,14 @@ using Xamarin.Forms.Xaml;
 
 namespace WeatherApp.Views
 {
-    public partial class NewItemPage : ContentPage
+    public partial class NewLocationPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Location Location { get; set; }
 
-        public NewItemPage()
+        public NewLocationPage()
         {
             InitializeComponent();
-            BindingContext = new NewItemViewModel();
+            BindingContext = new NewLocationViewModel();
         }
     }
 }

@@ -31,17 +31,8 @@
 
     <TabBar>
         <ShellContent Title="Current Position" Icon="icon_currentposition.png" Route="CurrentPositionPage" ContentTemplate="{DataTemplate local:CurrentPositionPage}" />
-        <ShellContent Title="Locations" Icon="icon_locations.png" Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="Locations" Icon="icon_locations.png" Route="LocationsPage" ContentTemplate="{DataTemplate local:LocationsPage}" />
         <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </TabBar>
-
-    <!--
-        If you would like to navigate to this content you can do so by calling
-        await Shell.Current.GoToAsync("//LoginPage");
-    -->
-    <TabBar>
-        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
-    </TabBar>
-
 
 </Shell>

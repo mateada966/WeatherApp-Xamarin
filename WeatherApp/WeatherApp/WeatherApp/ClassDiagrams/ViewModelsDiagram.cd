@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WeatherApp.ViewModels.AboutViewModel">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>ViewModels\AboutViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeatherApp.ViewModels.BaseViewModel">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAEAAIEAAAQBBgAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WeatherApp.ViewModels.CurrentPositionViewModel">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAQSEAAEUpAhZGICKaYEAAiGCAAEwkkQcgBtkGIABA=</HashCode>
+      <FileName>ViewModels\CurrentPositionViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeatherApp.ViewModels.LocationDetailViewModel">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAaCEAAGQpAhbGICKSQGAAiGCIAEwkmQcgBtkGIABA=</HashCode>
+      <FileName>ViewModels\LocationDetailViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeatherApp.ViewModels.LocationsViewModel">
+    <Position X="11.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAABgAAABAIAIAAAIAAAAAAACAAAAAAACAgAA=</HashCode>
+      <FileName>ViewModels\LocationsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeatherApp.ViewModels.NewLocationViewModel">
+    <Position X="16" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAACAAAAAAAAQIAAAACAAAAAIEAAACAAAAAAAEQAA=</HashCode>
+      <FileName>ViewModels\NewLocationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

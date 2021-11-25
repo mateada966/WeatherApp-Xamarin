@@ -6,10 +6,10 @@ namespace WeatherApp.Services
 {
     public interface IDataStore<T>
     {
-        Task<bool> AddItemAsync(T item);
-        Task<bool> UpdateItemAsync(T item);
-        Task<bool> DeleteItemAsync(string id);
-        Task<T> GetItemAsync(string id);
-        Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
+        Task<bool> AddLocationAsync(T item);
+        Task<bool> UpdateLocationAsync(T item);
+        Task<bool> DeleteLocationAsync(string id);
+        Task<T> GetLocationAsync(string id);
+        Task<IEnumerable<T>> GetLocationsAsync(bool forceRefresh = false);
     }
 }
